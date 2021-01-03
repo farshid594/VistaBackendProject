@@ -25,7 +25,7 @@ exports.LogOutAll = (req, res) => {
     })
 }
 exports.GetUser = (req, res) => {
-    res.status(200).json({ name: req.user.name })
+    res.status(200).json({ name: req.user.name, image: req.user.image })
 }
 exports.Upload = (req, res) => {
     req.files.image.mv('./public/profiles/' + req.files.image.name, (err) => {
